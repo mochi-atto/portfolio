@@ -242,8 +242,23 @@
   }
 
   .hobby-modal__gallery {
-    max-height: 50vh;
+    max-height: 45vh;
+    overflow-y: auto;
   }
+
+  .hobby-modal__media img {
+    max-height: 40vh;
+  }
+
+  .hobby-modal__media iframe {
+    max-height: 40vh;
+  }
+
+  .hobby-modal__sidebar {
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+
 
   .mt-tab__panel {
     width: 240px;

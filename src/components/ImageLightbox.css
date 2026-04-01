@@ -78,4 +78,11 @@
   .lightbox__arrow {
     background: rgba(0, 0, 0, 0.5);
   }
+    .lightbox {
+    max-width: 85vw;
+  }
+
+  .lightbox__image {
+    max-height: 70vh;
+  }
 }
