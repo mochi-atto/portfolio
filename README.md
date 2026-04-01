@@ -1,16 +1,18 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio site, built with React, Vite, and deployed on Vercel.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Themeable** — I set up all colors, fonts, and spacing as CSS variables so I can swap the entire palette from one file.
+- **Responsive** — Works across desktop, tablet, and mobile with a collapsible hamburger nav for smaller screens.
+- **Project timeline** — A vertical timeline that auto-sorts newest-first by date. Each card supports an optional affiliation, image gallery, and external link. Clicking an image opens a fullscreen lightbox with arrow navigation.
+- **Experience cards** — Auto-sorted with my ongoing roles pinned to the top and highlighted with an accent tint.
+- **Hobby grid** — An Instagram-style square grid. Clicking a post opens a modal with a horizontal media carousel (images and embedded YouTube videos) and a caption sidebar.
+- **MonkeyType integration** — A slide-out tab on my hobbies page that displays my typing stats (30s personal best, total time typing, last test date) pulled from the MonkeyType API.
+- **Serverless API proxy** — MonkeyType requests go through a Vercel serverless function for security.
+- **Contact page** — Mailto link for my email plus GitHub and LinkedIn buttons with their platform icons.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React · Vite · React Router · React Icons · Vercel Serverless Functions
