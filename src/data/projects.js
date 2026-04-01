@@ -65,7 +65,7 @@ const projects = [
   },
   {
     id: 'aoa-docparser',
-    name: 'Archdiocese of Atlanta (AoA) Facility Managment System',
+    name: 'Archdiocese of Atlanta (AoA) Facility Management System',
     date: '2025-08-15',
     affiliation: 'WELab Vertically Integrated Project (VIP)',
     description:
@@ -79,7 +79,7 @@ const projects = [
     date: '2025-09-01',
     affiliation: 'HackGT',
     description:
-      'basil is an intelligent recipe generation app that helps you make the most of the food in your fridge, prioritizing ingredients with sooner expiration dates to reduce food waste. It was created in just 36 hours as a part of HackGT. For this project, I utilized React.js to design and clean and intuitive frontend and Amazon Cognito for authentication. This connected with a Flask backend, an extensive USDA SQLite database to allow users to add ingredients to their fridge, and MosaicAI, which provided a platform for the app to utilize OpenAI LLMs.',
+      'basil is an intelligent recipe generation app that helps you make the most of the food in your fridge, prioritizing ingredients with sooner expiration dates to reduce food waste. It was created in just 36 hours as a part of HackGT. For this project, I utilized React.js to design a clean and intuitive frontend as well as Amazon Cognito for authentication. This connected with a Flask backend, an extensive USDA SQLite database to allow users to add ingredients to their fridge, and MosaicAI, which provided a platform for the app to utilize OpenAI LLMs.',
     images: [basil1, basil2, basil3, basil4, basil5],
     link: 'https://github.com/mochi-atto/2025_hackgt',
   },
@@ -99,7 +99,7 @@ const projects = [
     date: '2024-09-01',
     affiliation: 'WebDev @ GT',
     description:
-      'BuzzLink is a website created to connect students within the Georgia Tech community utilizing peer-to-peer video and audio calling. I created and implemented an effective design, using the React-based frontend, that reflected components from other popular communication platforms like Zoom and Discord, working with user familiarity and intuitive components. I also implemented user authentication using Auth0 and Firebase to allow users to login and join chatrooms.',
+      'BuzzLink is a website created to connect students within the Georgia Tech community utilizing peer-to-peer video and audio calling. I created and implemented an effective design, using the React-based frontend, that reflected components from other popular communication platforms like Zoom and Discord, working with user familiarity and intuitive components. I also implemented user authentication using Auth0 and Firebase to allow users to log in and join chatrooms.',
     images: [],
     link: '',
   },
