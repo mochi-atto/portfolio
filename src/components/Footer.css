@@ -1,0 +1,18 @@
+.footer {
+  background: var(--color-nav-footer);
+  color: var(--color-nav-footer-text);
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 0.85rem;
+  min-height: var(--footer-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.footer__credits {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}

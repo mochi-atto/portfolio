@@ -1,0 +1,257 @@
+/* ---- Post grid ---- */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding-bottom: 64px;
+}
+
+.hobby-grid__item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  background: var(--color-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.hobby-grid__item:hover img {
+  transform: scale(1.05);
+}
+
+.hobby-grid__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- Modal overlay ---- */
+.hobby-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.hobby-modal {
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  min-height: 400px;
+  display: flex;
+  overflow: hidden;
+}
+
+.hobby-modal__gallery {
+  flex: 1.2;
+  min-width: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 12px;
+}
+
+.hobby-modal__media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.hobby-modal__media img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.hobby-modal__media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 6px;
+}
+
+.hobby-modal__nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hobby-modal__arrow {
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-speed);
+}
+
+.hobby-modal__arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hobby-modal__counter {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+.hobby-modal__sidebar {
+  flex: 0.8;
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px; */
+}
+
+.hobby-modal__caption {
+  font-size: 1rem;
+  line-height: 1.65;
+  white-space: pre-line;
+  overflow-y: scroll;
+}
+
+.hobby-modal__close {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  color: var(--color-muted);
+  transition: color var(--transition-speed);
+}
+
+.hobby-modal__close:hover {
+  color: var(--color-accent);
+}
+
+/* ---- MonkeyType tab ---- */
+.mt-tab {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 90;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mt-tab--open {
+  transform: translateX(0);
+}
+
+.mt-tab__trigger {
+  position: absolute;
+  left: -48px;
+  top: 0;
+  width: 48px;
+  background: var(--color-accent-light);
+  padding: 12px 10px;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mt-tab__trigger svg {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+}
+
+.mt-tab__trigger img {
+  width: 25px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.mt-tab__panel {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-right: none;
+  border-radius: 0 0 0 var(--border-radius);
+  width: 280px;
+  padding: 24px;
+  box-shadow: -4px 0 16px var(--color-card-shadow);
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.mt-tab__panel h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.mt-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-card-border);
+  font-size: 0.95rem;
+}
+
+.mt-stat__label {
+  color: var(--color-muted);
+}
+
+.mt-stat__value {
+  font-weight: 600;
+}
+
+.mt-tab__error,
+.mt-tab__loading {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hobby-modal {
+    flex-direction: column;
+    max-height: 90vh;
+  }
+
+  .hobby-modal__gallery {
+    max-height: 50vh;
+  }
+
+  .mt-tab__panel {
+    width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

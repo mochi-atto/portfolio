@@ -1,0 +1,113 @@
+/* ---- Timeline ---- */
+.timeline {
+  position: relative;
+  padding: 16px 0 64px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: var(--color-card-border);
+}
+
+/* ---- Timeline card ---- */
+.timeline__item {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 40px;
+}
+
+/* Dot on the line */
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  border: 3px solid var(--color-content-bg);
+  z-index: 1;
+}
+
+.timeline__card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+}
+
+.timeline__name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timeline__affiliation {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.timeline__desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-content-text);
+}
+
+/* ---- Project images ---- */
+.timeline__images {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.timeline__images img {
+  height: 160px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.timeline__images img {
+  cursor: pointer;
+  transition: opacity var(--transition-speed);
+}
+
+.timeline__images img:hover {
+  opacity: 0.8;
+}
+
+.timeline__link {
+  margin-top: -4px;
+  display: inline-flex;
+  margin-left: 10px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  vertical-align: middle;
+  transition: color var(--transition-speed);
+}
+
+.timeline__link:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .timeline::before { left: 14px; }
+  .timeline__item { padding-left: 44px; }
+  .timeline__item::before { left: 6px; width: 16px; height: 16px; }
+  .timeline__card { padding: 20px; }
+  .timeline__name { font-size: 1.15rem; }
+}

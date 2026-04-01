@@ -1,0 +1,58 @@
+.contact {
+  padding-bottom: 80px;
+}
+
+.contact__blurb {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  /* max-width: 560px; */
+  margin-bottom: 36px;
+}
+
+.contact__blurb a {
+  color: var(--color-accent);
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.contact__blurb a:hover {
+  color: var(--color-accent-hover);
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--border-radius);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.contact__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-card-shadow);
+}
+
+.contact__btn--github {
+  background: #24292e;
+  color: #fff;
+}
+
+.contact__btn--linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.contact__btn svg {
+  font-size: 1.3rem;
+}
