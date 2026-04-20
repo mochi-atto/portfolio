@@ -71,7 +71,7 @@ const projects = [
     description:
       'This facility management software is intended for the Archdiocese of Atlanta and organizes and draws insight from utility bills and appraisal documents for multiple parishes. I used TesseractOCR and pdfplumber to handle the parsing of the documents securely and worked with teammates to develop and implement an effective user interface.',
     images: [aoa1, aoa2, aoa3, aoa4, aoa5, aoa6, aoa7],
-    link: '',
+    link: 'https://github.com/mochi-atto/aoa-docparse',
   },
   {
     id: 'basil',
