@@ -32,7 +32,11 @@ export default function Navbar() {
       </button>
 
       {/* ---- Page links (right side) ---- */}
-      <div className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
+      <div className={`navbar__links max-sm:transition-all max-sm:duration-200 max-sm:ease-in-out ${
+        menuOpen
+          ? 'max-sm:opacity-100 max-sm:translate-y-0'
+          : 'max-sm:opacity-0 max-sm:-translate-y-2 max-sm:pointer-events-none'
+      }`}>
         <NavLink
           to="/"
           end
@@ -60,6 +64,15 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           Hobbies
+        </NavLink>
+        <NavLink
+          to="/resume"
+          className={({ isActive }) =>
+            `navbar__link ${isActive ? 'navbar__link--active' : ''}`
+          }
+          onClick={closeMenu}
+        >
+          Resume
         </NavLink>
         <NavLink
           to="/contact"

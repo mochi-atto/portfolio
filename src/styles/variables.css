@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 :root {
@@ -6,6 +7,7 @@
   --color-nav-footer-text: #e0e0e0;
   --color-content-bg: #f4f4f8;
   --color-content-text: #2c2c3a;
+  --color-content-text-hover: #1a1a28;
 
   /* ---- Accent ---- */
   --color-accent: #2977CC;
@@ -15,6 +17,7 @@
 
   /* ---- Cards / surfaces ---- */
   --color-card-bg: #ffffff;
+  --color-card-body-bg: #f8f8fa;
   --color-card-border: #e0e0e4;
   --color-card-shadow: rgba(0, 0, 0, 0.08);
 

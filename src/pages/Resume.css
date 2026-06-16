@@ -1,0 +1,118 @@
+.resume__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ---- Toggle pill ---- */
+.resume__toggle {
+  display: flex;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.resume__tab {
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+.resume__tab--active {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.resume__tab:not(.resume__tab--active):hover {
+  color: var(--color-content-text);
+}
+
+/* ---- Action buttons ---- */
+.resume__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.resume__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  color: var(--color-content-text);
+  transition: border-color var(--transition-speed), color var(--transition-speed);
+}
+
+.resume__btn:hover {
+  border-color: var(--color-accent-light);
+  color: var(--color-accent-light);
+}
+
+.resume__btn--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- Under construction placeholder ---- */
+.resume__under-construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 200px;
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--color-card-border);
+  color: var(--color-muted);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 48px;
+}
+
+/* ---- PDF iframe ---- */
+.resume__viewer {
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--color-card-border);
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  margin-bottom: 48px;
+}
+
+.resume__viewer iframe {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .resume__controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume__viewer iframe {
+    height: 70vh;
+  }
+}

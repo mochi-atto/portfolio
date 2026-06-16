@@ -45,7 +45,7 @@
   color: #fff;
   font-size: 2rem;
   padding: 8px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   transition: background var(--transition-speed);
 }

@@ -157,19 +157,48 @@
 .exp-card {
   width: 100%;
   max-width: 640px;
-  padding: 24px 28px;
-  background: var(--color-card-bg);
+  background: transparent;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-card__header {
   border: 1px solid var(--color-card-border);
   border-radius: var(--border-radius);
+  background: var(--color-card-bg);
   box-shadow: 0 2px 8px var(--color-card-shadow);
+}
+
+
+.exp-card--ongoing .exp-card__header {
+  border-color: var(--color-accent-light);
+}
+
+.exp-card--expandable > .exp-card__header {
+  cursor: pointer;
+}
+
+.exp-card__header:hover .exp-card__title {
+  color: var(--color-accent-light);
+}
+
+.exp-card__header {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.exp-card:hover .exp-card__header {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--color-card-shadow);
+}
+
+.exp-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-}
-
-.exp-card--ongoing {
-  border-color: var(--color-accent-light);
+  padding: 24px 28px;
 }
 
 .exp-card__info {
@@ -182,6 +211,8 @@
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
+  color: var(--color-content-text);
+  transition: color var(--transition-speed);
 }
 
 .exp-card__org {
@@ -213,6 +244,94 @@
 
 .exp-card__link:hover {
   color: var(--color-accent);
+}
+
+/* ---- Past experiences toggle ---- */
+.experiences__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 0;
+  transition: color var(--transition-speed);
+}
+
+.experiences__toggle:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Expandable body ---- */
+.exp-card__body {
+  margin: 0 12px;
+  padding: 20px 28px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-card-body-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+}
+
+.exp-card__desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-content-text);
+}
+
+.exp-card__desc p {
+  margin: 0 0 0.75em;
+}
+
+.exp-card__desc p:last-child {
+  margin-bottom: 0;
+}
+
+.exp-card__desc-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exp-card__desc-link:hover {
+  opacity: 0.8;
+}
+
+.exp-card__collapse {
+  align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color var(--transition-speed);
+}
+
+.exp-card__collapse:hover {
+  color: var(--color-accent);
+}
+
+.exp-card__video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.exp-card__video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* ---- Navigation cards section ---- */
@@ -292,7 +411,7 @@
     font-size: 1.1rem;
   }
 
-  .exp-card {
+  .exp-card__header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
